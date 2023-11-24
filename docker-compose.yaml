@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  db:
+    image: alikhan0/mysqldb
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+
+  web:
+    image: alikhan0/onlinebookstore
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db

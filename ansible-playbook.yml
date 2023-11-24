@@ -1,0 +1,27 @@
+- hosts: all
+  tasks:
+    - name: Docker YUM
+      yum:
+        name: 
+          - docker
+          - python3-pip
+        state: present
+
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+        enabled: yes
+
+    - name: Pull default Docker image
+      community.docker.docker_image:
+        name: "alikhan0/onlinebookstore:latest"
+        source: pull
+        
+    - name: Create Web Java Docker container
+      community.docker.docker_container:
+        name: onlinebookstore
+        image: "alikhan0/onlinebookstore:latest"
+        state: started
+        ports:
+          - "80:8080"
