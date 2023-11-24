@@ -37,8 +37,7 @@ jobs:
 
     - name: Print Home Directory Contents
       run: |
-        ls -l $HOME
-        ls -l $HOME/bin
+        ls -a $HOME
         
     #- name: Build with Maven
     #  run: mvn clean install
