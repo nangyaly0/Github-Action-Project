@@ -100,7 +100,7 @@
 		<dependency>
                         <groupId>org.seleniumhq.selenium</groupId>
                         <artifactId>selenium-java</artifactId>
-                        <version>4.15.0</version> <!-- Use the latest version available -->
+                        <version>4.2.1</version> <!-- Use the latest version available -->
                         <scope>test</scope>
                 </dependency>
 		<dependency>
