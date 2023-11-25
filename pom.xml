@@ -8,6 +8,7 @@
 	<packaging>war</packaging>
 	<build>
 		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
 		<finalName>onlinebookstore</finalName>
 		<plugins>
 			<plugin>
