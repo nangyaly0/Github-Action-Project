@@ -43,7 +43,7 @@ jobs:
         
     - name: Build with Maven
       run: |
-        mvn clean install -U
+        mvn clean install -X
         mvn test -Dtest=unittest
 
     - name: Show contents of target directory
