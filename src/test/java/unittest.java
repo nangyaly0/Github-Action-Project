@@ -8,13 +8,13 @@ public class unittest {
     @Test
     public void testLoginPage() {
         // Set the path to your ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/runner/bin/chromedriver");
 
         // Create a new instance of the Chrome driver
         WebDriver driver = new ChromeDriver();
 
         // Navigate to the login page
-        driver.get("/Users/alikhan/Documents/Lambton_College/3rd_semester/CI-CD/Github-Action-Project/WebContent/login.html");
+        driver.get("/home/runner/work/Github-Action-Project/Github-Action-Project/WebContent/login.html");
 
         // Find the element by its ID
         WebElement welcomeDiv = driver.findElement(By.id("topmid"));
