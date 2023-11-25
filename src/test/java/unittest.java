@@ -11,7 +11,9 @@ public class unittest {
         System.setProperty("webdriver.chrome.driver", "/home/runner/bin/chromedriver");
 
         // Create a new instance of the Chrome driver
-        WebDriver driver = new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless");
+        WebDriver driver = new ChromeDriver(options);
 
         // Navigate to the login page
         driver.get("/home/runner/work/Github-Action-Project/Github-Action-Project/WebContent/login.html");
