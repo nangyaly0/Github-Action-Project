@@ -1,7 +1,7 @@
 From openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 WORKDIR /app
-COPY /home/runner/work/Github-Action-Project/Github-Action-Project/ /app/
+COPY /home/runner/work/Github-Action-Project/Github-Action-Project/ /app
 RUN mvn clean install
 
 From tomcat:9-jre11
