@@ -12,7 +12,7 @@ public class unittest {
     @Test
     public void testLoginPage() {
         // Set the path to your ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "/home/runner/bin/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "/home/runner/bin/chromedriver-linux64/chromedriver");
 
         // Create a new instance of the Chrome driver
         ChromeOptions options = new ChromeOptions();
