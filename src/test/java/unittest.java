@@ -6,6 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import static org.junit.Assert.assertEquals;
 
 
 public class unittest {
@@ -32,14 +33,19 @@ public class unittest {
         // Find the element by its ID
         WebElement welcomeDiv = driver.findElement(By.id("topmid"));
 
-        // Check if the element is present
-        if (welcomeDiv.isDisplayed()) {
-            WebElement h1Element = welcomeDiv.findElement(By.tagName("h1"));
-            String messageText = h1Element.getText();
-            System.out.println("Element is present. Message: " + messageText);
-        } else {
-            System.out.println("Element is not present on the login page.");
-        }
+      // Check if the element is present
+      if (welcomeDiv.isDisplayed()) {
+         WebElement h1Element = welcomeDiv.findElement(By.tagName("h1"));
+         String messageText = h1Element.getText();
+         System.out.println("Element is present. Message: " + messageText);
+
+         // Assert that the text is as expected
+         assertEquals("Welcome to Online Book Store", messageText);
+      } else {
+         System.out.println("Element is not present on the login page.");
+         // Fail the test explicitly if the element is not present
+         fail("Element is not present on the login page.");
+      }
 
         // Close the browser
         driver.quit();
