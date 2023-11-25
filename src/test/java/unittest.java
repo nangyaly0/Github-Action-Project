@@ -7,6 +7,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.Capabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 
 public class unittest {
