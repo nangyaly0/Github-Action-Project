@@ -45,3 +45,7 @@ jobs:
       run: |
         mvn clean install
         mvn test
+
+    - name: Show test reports
+      run: |
+        cat target/surefire-reports/*.txt
