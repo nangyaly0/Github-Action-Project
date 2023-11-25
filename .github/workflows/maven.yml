@@ -38,6 +38,7 @@ jobs:
         mvn clean install -X
         
   Test:
+  needs: build
     runs-on: ubuntu-latest
 
     steps:
