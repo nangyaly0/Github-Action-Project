@@ -35,6 +35,7 @@ jobs:
           ls -l $HOME
           ls -l $HOME/bin
           pwd
+          ls
           echo $GITHUB_ENV
          
           
@@ -43,4 +44,4 @@ jobs:
     - name: Build with Maven
       run: |
         mvn clean install
-        mvn clean test
+        mvn test
