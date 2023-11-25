@@ -1,3 +1,4 @@
+import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -5,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class unittest {
     @Test
-    public static void main(String[] args) {
+    public static void testLoginPage() {
         // Set the path to your ChromeDriver executable
         System.setProperty("webdriver.chrome.driver", "/home/runner/bin/chromedriver  ");
 
@@ -13,7 +14,7 @@ public class unittest {
         WebDriver driver = new ChromeDriver();
 
         // Navigate to the login page
-        driver.get("file:///path/to/your/project/WebContent/login.html");
+        driver.get("/home/runner/work/Github-Action-Project/Github-Action-Project/WebContent/login.html");
 
         // Find the element by its ID
         WebElement welcomeDiv = driver.findElement(By.id("topmid"));
