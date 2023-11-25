@@ -31,20 +31,33 @@ jobs:
       run: |
           wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.159/linux64/chromedriver-linux64.zip
           unzip chromedriver-linux64.zip -d $HOME/bin
-          ls -l $HOME
-          ls -l $HOME/bin
-          pwd
-          ls
-          echo $GITHUB_ENV
-         
-          
           chmod +x /home/runner/bin/chromedriver-linux64/chromedriver
-        
+
     - name: Build with Maven
       run: |
         mvn clean install -X
+        
+  Test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up JDK 17
+      uses: actions/setup-java@v3
+      with:
+        java-version: '11'
+        distribution: 'adopt'
+        
+    - name: Download and Install ChromeDriver
+      run: |
+          wget https://edgedl.me.gvt1.com/edgedl/chrome/chrome-for-testing/119.0.6045.159/linux64/chromedriver-linux64.zip
+          unzip chromedriver-linux64.zip -d $HOME/bin
+          chmod +x /home/runner/bin/chromedriver-linux64/chromedriver
+          
+    - name: Build with Maven
+      run: |
         mvn test -Dtest=unittest
 
     - name: Show contents of target directory
       run: |
-        ls -R target
+        cat > target/surefire-reports/unittest.txt
