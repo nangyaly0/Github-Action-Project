@@ -1,7 +1,7 @@
 From openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 WORKDIR /app
-git clone https://github.com/nangyaly0/Github-Action-Project.git
+RUN git clone https://github.com/nangyaly0/Github-Action-Project.git
 RUN mvn clean install
 
 From tomcat:9-jre11
