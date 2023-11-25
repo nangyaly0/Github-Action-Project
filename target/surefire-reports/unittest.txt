@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: unittest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 20.77 s <<< FAILURE! - in unittest
+unittest.testLoginPage  Time elapsed: 20.636 s  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+Timed out waiting for driver server to start.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Alis-MacBook-Air.local', ip: 'fe80:0:0:0:8a7:919e:fac6:e14c%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.15.7', java.version: '11.0.15'
+Driver info: driver.version: ChromeDriver
+	at unittest.testLoginPage(unittest.java:14)
+Caused by: org.openqa.selenium.net.UrlChecker$TimeoutException: Timed out waiting for [http://localhost:8665/status] to be available after 20008 ms
+	at unittest.testLoginPage(unittest.java:14)
+Caused by: java.util.concurrent.TimeoutException
+	at unittest.testLoginPage(unittest.java:14)
+
