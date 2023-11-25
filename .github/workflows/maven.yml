@@ -32,12 +32,15 @@ jobs:
           CHROMEDRIVER_VERSION=$(curl -sS https://chromedriver.storage.googleapis.com/LATEST_RELEASE)
           wget https://chromedriver.storage.googleapis.com/${CHROMEDRIVER_VERSION}/chromedriver_linux64.zip
           unzip chromedriver_linux64.zip -d $HOME/bin
-          echo $GITHUB_ENV
           ls -l $HOME
           ls -l $HOME/bin
+          pwd
+      #echo $GITHUB_ENV
+         
+          
           chmod +x /home/runner/bin/chromedriver
         
     - name: Build with Maven
       run: |
         mvn clean install
-        mvn clean test -X
+        mvn clean test
