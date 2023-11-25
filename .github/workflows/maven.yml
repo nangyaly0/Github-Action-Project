@@ -38,7 +38,7 @@ jobs:
           echo $GITHUB_ENV
          
           
-          chmod +x /home/runner/bin/chromedriver
+          chmod +x /home/runner/bin/chromedriver-linux64/chromedriver
         
     - name: Build with Maven
       run: |
