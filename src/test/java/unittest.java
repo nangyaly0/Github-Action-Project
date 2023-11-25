@@ -27,7 +27,7 @@ public class unittest {
         System.out.println("Chrome browser version: " + caps.getCapability("browserVersion"));
 
         // Navigate to the login page
-        driver.get("/home/runner/work/Github-Action-Project/Github-Action-Project/WebContent/login.html");
+        driver.get("file:///home/runner/work/Github-Action-Project/Github-Action-Project/WebContent/login.html");
 
         // Find the element by its ID
         WebElement welcomeDiv = driver.findElement(By.id("topmid"));
