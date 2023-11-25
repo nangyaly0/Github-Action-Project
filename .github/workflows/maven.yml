@@ -35,7 +35,7 @@ jobs:
           ls -l $HOME
           ls -l $HOME/bin
           pwd
-      #echo $GITHUB_ENV
+          echo $GITHUB_ENV
          
           
           chmod +x /home/runner/bin/chromedriver
