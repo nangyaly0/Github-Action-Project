@@ -17,7 +17,7 @@ public class unittest {
         // Create a new instance of the Chrome driver
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
-        //options.AddArgument("no-sandbox");
+        options.AddArgument("no-sandbox");
         WebDriver driver = new ChromeDriver(options);
 
         // Print ChromeDriver version
