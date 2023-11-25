@@ -11,6 +11,14 @@ public class unittest {
         // Set the path to your ChromeDriver executable
         System.setProperty("webdriver.chrome.driver", "/home/runner/bin/chromedriver");
 
+        // Print ChromeDriver version
+        System.out.println("ChromeDriver version: " + System.getProperty("webdriver.chrome.driver.version"));
+
+        // Print Chrome browser version
+        Capabilities caps = ((RemoteWebDriver) driver).getCapabilities();
+        System.out.println("Chrome browser version: " + caps.getCapability("browserVersion"));
+
+
         // Create a new instance of the Chrome driver
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless");
