@@ -3,13 +3,13 @@ services:
   db:
     image: alikhan0/mysqldb
     ports:
-      - "3306:3307"
+      - "3306:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=password
 
   web:
     image: alikhan0/onlinebookstore
     ports:
-      - "8080:8082"
+      - "8080:8080"
     depends_on:
       - db
