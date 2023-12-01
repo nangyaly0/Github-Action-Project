@@ -108,6 +108,6 @@ jobs:
           sudo apt install ansible
 
       - name: Deploy with Ansible
-        run: ansible-playbook -i ip.txt -u "ec2-user" --private-key ~/.ssh/id_rsa ansible-playbook.yml
+        run: ansible-playbook -i ip.txt -u "far_from_home" --private-key ~/.ssh/id_rsa ansible-playbook.yml
         env:
           ANSIBLE_SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
