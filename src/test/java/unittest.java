@@ -36,7 +36,7 @@ public class unittest {
 
       // Check if the element is present
       if (welcomeDiv.isDisplayed()) {
-         WebElement h1Element = welcomeDiv.findElement(By.tagName("h1"));
+         WebElement h1Element = welcomeDiv.findElement(By.tagName("h2"));
          String messageText = h1Element.getText();
          System.out.println("Element is present. Message: " + messageText);
 
