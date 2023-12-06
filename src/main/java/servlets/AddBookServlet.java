@@ -41,7 +41,7 @@ public class AddBookServlet extends HttpServlet {
             //render the add book form;
             showAddBookForm(pw);
             return;
-        } //else process the add book
+        } //else process the add book form
         
  
         try {
