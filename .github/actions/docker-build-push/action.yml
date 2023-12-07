@@ -16,6 +16,6 @@ runs:
 
   - name: Build and Push Docker Image
     run: |
-      docker build -t ${{ inputs.image-name }} -f /home/runner/work/Github-Action-Project/Github-Action-Project/Docker-files/app/Dockerfile
+      docker build -t ${{ inputs.image-name }} -f /home/runner/work/Github-Action-Project/Github-Action-Project/Docker-files/app/Dockerfile .
       docker push ${{ inputs.image-name }}
     shell: ${{ inputs.bash-interpreter }}
