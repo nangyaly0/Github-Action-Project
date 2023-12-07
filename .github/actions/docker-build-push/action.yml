@@ -1,0 +1,21 @@
+name: 'Build and Push Docker Image'
+description: 'Builds a Docker image and pushes it to a registry'
+
+inputs:
+  image-name:
+    description: 'Name of the Docker image'
+    required: true
+  bash-interpreter:
+    description: 'bash or powershell'
+
+runs:
+  using: 'composite'
+  steps:
+  - name: Checkout Repository
+    uses: actions/checkout@v2
+
+  - name: Build and Push Docker Image
+    run: |
+      docker build -t ${{ inputs.image-name }} -f /home/runner/work/Github-Action-Project/Github-Action-Project/Docker-files/app/Dockerfile
+      docker push ${{ inputs.image-name }}
+    shell: ${{ inputs.bash-interpreter }}

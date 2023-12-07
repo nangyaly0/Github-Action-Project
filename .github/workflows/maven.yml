@@ -84,13 +84,11 @@ jobs:
         run: |
           echo ${{ env.password }} | docker login -u ${{ env.username }} --password-stdin
 
-      - name: Build the docker image
-        run: |
-           docker build . -t alikhan0/onlinebookstore:latest -f /home/runner/work/Github-Action-Project/Github-Action-Project/Docker-files/app/Dockerfile
-          
-      - name: push Docker image
-        run: |
-          docker push alikhan0/onlinebookstore:latest
+      - name: Build and Push the docker image
+        uses: ./.github/actions/docker-build-push
+        with:
+          image-name: 'alikhan0/onlinebookstore:latest'
+          bash-interpreter: 'bash'
     
   Deploy:
     needs: Containerizing-and-push
